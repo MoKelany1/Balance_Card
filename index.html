@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Start Balance Section -->
+  <div class="container">
+    <div class="content">
+      <div class="balance">
+        <div class="text">
+          <p class="title">My balance</p>
+          <p class="price">$921.48</p>
+        </div>
+        <div class="shape"></div>
+      </div>
+      <div class="spending">
+        <h2>Spending - Last 7 days</h2>
+        <div class="bars">
+          <div class="bar mon">
+            <div class="amount" style="height: 25%;"></div>
+            <p class="day">mon</p>
+          </div>
+          <div class="bar tue">
+            <div class="amount" style="height: 50%;"></div>
+            <p class="day">tue</p>
+          </div>
+          <div class="bar wed">
+            <div class="amount tallest" style="height: 75%;"></div>
+            <p class="day">wed</p>
+          </div>
+          <div class="bar thu">
+            <div class="amount" style="height: 50%;"></div>
+            <p class="day">thu</p>
+          </div>
+          <div class="bar fri">
+            <div class="amount" style="height: 30%;"></div>
+            <p class="day">fri</p>
+          </div>
+          <div class="bar sat">
+            <div class="amount" style="height: 60%;"></div>
+            <p class="day">sat</p>
+          </div>
+          <div class="bar sun">
+            <div class="amount" style="height: 40%;"></div>
+            <p class="day">sun</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="total">
+            <p class="title">Total this month</p>
+            <p class="number">$478.33</p>
+          </div>
+          <div class="percent">
+            <p class="number">+2.4%</p>
+            <p class="title">from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    <div class="content">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/MoKelany1">MoKelany</a>.
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+/* Start Variables */
+:root {
+    --background-color: #F7E9DC;
+    /* Primary Colors */
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    /* Netural Colors */
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--background-color);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 375px;
+}
+
+.content .balance {
+    background-color: var(--soft-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.content .balance .text .title {
+    color: var(--very-pale-orange);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.content .balance .text .price {
+    font-size: 30px;
+    color: var(--cream);
+    font-weight: bold;
+}
+
+.content .balance .shape {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-brown);
+    border-radius: 50%;
+}
+
+.content .balance .shape::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--cream);
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+.content .spending {
+    background-color: var(--very-pale-orange);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content .spending h2 {
+    margin: 15px 0;
+    color: var(--dark-brown);
+}
+
+.content .spending .bars {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.content .spending .bars .bar {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .spending .bars .bar .amount {
+    position: relative;
+    min-width: 40px;
+    border-radius: 6px;
+    background-color: var(--soft-red);
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+.content .spending .bars .bar .amount::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cream);
+    left: 50%;
+    top: -30px;
+    width: 120%;
+    height: 28px;
+    background-color: var(--dark-brown);
+    transform: translateX(-50%);
+    border-radius: 6px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+.content .spending .bars .mon .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .tue .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .wed .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .thu .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .fri .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .sat .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .sun .amount::before {
+    content: "$68.33";
+}
+
+.content .spending .bars .bar .amount:hover {
+    opacity: .7;
+}
+
+.content .spending .bars .bar .amount:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content .spending .bars .bar .tallest {
+    background-color: var(--cyan);
+}
+
+.content .spending .bars .bar .day {
+    color: var(--medium-brown);
+    text-align: center;
+}
+
+.content .spending .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid var(--medium-brown);
+}
+
+.content .spending .info .total {}
+
+.content .spending .info .total .title {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: var(--medium-brown);
+}
+
+.content .spending .info .total .number {
+    font-size: 30px;
+    color: var(--dark-brown);
+    font-weight: bold;
+}
+
+.content .spending .info .percent {
+    margin-top: 15px;
+}
+
+.content .spending .info .percent .title {
+    font-size: 15px;
+    color: var(--medium-brown);
+}
+
+.content .spending .info .percent .number {
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 15px;
+    color: var(--dark-brown);
+}
+
+.attribution {
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.attribution .content {
+    width: 375px;
+    margin: 10px auto;
+}
+
+.attribution a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 15px 10px;
+    border: 1px solid var(--dark-brown);
+    width: fit-content;
+    border-radius: 6px;
+    color: var(--cyan);
+    background-color: white;
+    margin: 20px auto;
+    position: relative;
+    transition: 0.5s;
+}
+
+.attribution a:hover {
+    color: white;
+    background-color: var(--cyan);
+    border-color: var(--cyan);
+}
